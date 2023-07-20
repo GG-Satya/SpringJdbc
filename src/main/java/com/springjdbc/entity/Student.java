@@ -1,6 +1,7 @@
 package com.springjdbc.entity;
 
 public class Student {
+	private int id;
 	private String name;
 	private String city;
 	private int age;
@@ -9,11 +10,21 @@ public class Student {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Student(String name, String city, int age) {
+	
+	public Student(int id, String name, String city, int age) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.city = city;
 		this.age = age;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getName() {
 		return name;

@@ -19,12 +19,20 @@ public class App
         ApplicationContext context = new ClassPathXmlApplicationContext("com/springjdbc/Config.xml");
         StudentDao studentDao = context.getBean("studentDao",StudentDao.class);
         
-        Student student = new Student("gg","Raighar",23);
+          //Insert
+//        Student student = new Student(1,"gg","Raighar",23);
+//        studentDao.insert(student);
+//        System.out.println("student added "+student);
         
-        studentDao.insert(student);
-        
-        System.out.println("student added "+student);
-//        int update = template.update(query,"gudi","jaypur",20);
+        //Update
+//        Student student2 = new Student(1,"new name","new city",00);
+//        int update = studentDao.update(student2);
 //        System.out.println("number of record updated---> "+update);
+        
+        //Delete
+          Student student3 = new Student(1,"new name","new city",00);
+          int delete = studentDao.delete(student3);
+          System.out.println("number of record deleted---> "+delete);
+        
     }
 }
